@@ -1,3 +1,5 @@
+//Card Weather
+
 const apiKey = "28e56c3d9b71382bdff7c39f146efa9f"
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
@@ -42,5 +44,18 @@ searchBtn.addEventListener("click", () => {
 })
 
 checkWeather();
+
+//Dark Theme
+
+var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+            icon.src = "images/sun.png";
+        }else{
+            icon.src = "images/moon.png";
+        }
+    }
 
 
