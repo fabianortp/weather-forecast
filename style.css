@@ -12,6 +12,7 @@
 .dark-theme{
     --primary-color: #000106;
     --secondary-color: #fff;
+    .invert { filter: invert(100%); };
 }
 
 #icon{
@@ -58,7 +59,7 @@ nav ul li:hover{
 .card{
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    background: var(--secondary-color);
     color: #fff;
     margin: 100px auto 0;
     border-radius: 20px;
@@ -77,8 +78,8 @@ nav ul li:hover{
 .search input{
     border: 0;
     outline: 0;
-    background: #ebfffc;
-    color: #555;
+    background: var(--primary-color);
+    color: var(--secondary-color);
     padding: 5px 25px;
     height: 40px;
     border-radius: 30px;
@@ -87,18 +88,25 @@ nav ul li:hover{
     font-size: 18px;
 }
 
+.search ::placeholder {
+    color: var(--secondary-color);
+  }
+
+
 .search button{
     border: 0;
     outline: 0;
-    background: #ebfffc;
+    background: var(--primary-color);
     border-radius: 50%;
     width: 55px;
     height: 55px;
     cursor: pointer;
+    filter: ;
 }
 
 .search button img{
     width: 26px;
+    
 }
 
 .weather-icon{
@@ -109,12 +117,14 @@ nav ul li:hover{
 .weather h1{
     font-size: 80px;
     font-weight: 500;
+    color: var(--primary-color);
 }
 
 .weather h2{
     font-size: 45px;
     font-weight: 400;
     margin-top: -10px;
+    color: var(--primary-color);
 }
 
 .details{
@@ -123,6 +133,7 @@ nav ul li:hover{
     justify-content: space-between;
     padding: 0 10px;
     margin-top: 50px;
+    color: var(--primary-color);
 }
 
 .col{
@@ -134,7 +145,9 @@ nav ul li:hover{
 .col img{
     width: 40px;
     margin-right: 10px;
+    
 }
+
 
 .humidity, .wind{
     font-size: 28px;
@@ -151,4 +164,5 @@ nav ul li:hover{
     font-size: 14px;
     margin-top: 10px;
     display: none;
+    color: var(--primary-color);
 }
