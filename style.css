@@ -21,7 +21,7 @@
     padding-left: 15px;
 }
 
-.hero{
+.container{
     height: 100vh;
     width: 100%;
     background: var(--primary-color);
@@ -29,7 +29,7 @@
     position: relative;
 }
 
-nav{
+.langWrap{
     width: 84%;
     margin: auto;
     padding: 20px 0;
@@ -38,12 +38,12 @@ nav{
     justify-content: space-between;
 }
 
-nav ul{
+.langWrap .items{
     flex: 1;
     text-align: right;
 }
 
-nav ul li{
+.langWrap .items a{
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
@@ -52,9 +52,10 @@ nav ul li{
     cursor: pointer;
 }
 
-nav ul li:hover{
+.langWrap .items a:hover{
     color: #ff4321;
 }
+
 
 .card{
     width: 90%;
@@ -66,6 +67,17 @@ nav ul li:hover{
     padding: 40px 35px;
     text-align: center;
     box-sizing: border-box;
+}
+
+.cityNam{
+    align-items: end;
+    padding-right: 100px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: 200;
+    
+    color: var(--primary-color);
 }
 
 .search{
@@ -101,7 +113,7 @@ nav ul li:hover{
     width: 55px;
     height: 55px;
     cursor: pointer;
-    filter: ;
+    
 }
 
 .search button img{

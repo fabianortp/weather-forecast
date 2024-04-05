@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="hero">
-        <nav>
-            <ul>
-                <li>Portuguese</li>
-                <li>English</li>
-            </ul>
+    <div class="container">
+        <div class="langWrap">
+            <div class="items">
+                <a href="#" language='portuguese' class="active">Portuguese</a>
+                <a href="#" language='english'>English</a>
+            </div>
             <img src="images/moon.png" id="icon">
-        </nav>
-
+        </div>
         <div class="card">
+            <div>
+                <p class="cityNam">Enter city name</p>
+            </div>
             <div class="search">
-                <input type="text" placeholder="enter city name" spellcheck="false">
+                <input type="text" placeholder="" spellcheck="false">
                 <button><img src="images/search.png" class="invert"></button>
             </div>
-            <div class="error">
-                <p>Invalid city name</p>
+            <div>
+                <p class="error">Invalid city name</p>
             </div>
             <div class="weather">
                 <img src="images/rain.png" class="weather-icon">
@@ -34,25 +35,21 @@
                         <img src="images/humidity.png" class="invert">
                         <div>
                             <p class="humidity">50%</p>
-                            <p>Humidity</p>
+                            <p class="humiditytxt">Humidity</p>
                         </div>
                     </div>
                     <div class="col">
                         <img src="images/wind.png" class="invert">
                         <div>
                             <p class="wind">15 km/h</p>
-                            <p>Wind Speed</p>
+                            <p class="windtxt">Wind Speed</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    
-</div>
-<!-- This connects your JavaScript to the HTML -->    
+</div>   
 <script src="script.js" defer></script>
-    
 </body>
 </html>

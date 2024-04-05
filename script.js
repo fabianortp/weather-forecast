@@ -58,4 +58,47 @@ var icon = document.getElementById("icon");
         }
     }
 
+// Language Change
+
+const langEl = document.querySelector('.langWrap');
+const link = document.querySelectorAll('a');
+const citynamEl = document.querySelector('.cityNam');
+const errorEl = document.querySelector('.error');
+const humidityEl = document.querySelector('.humiditytxt');
+const windEl = document.querySelector('.windtxt');
+const inputEl = document.querySelector('.text');
+
+
+link.forEach(el => {
+    el.addEventListener('click', () => {
+        langEl.querySelector('.active').classList.remove('active');
+        el.classList.add('active');
+
+        const attr = el.getAttribute('language');
+
+        citynamEl.textContent = dataLang[attr].cityNam;
+        errorEl.textContent = dataLang[attr].error;
+        humidityEl.textContent = dataLang[attr].humidity;
+        windEl.textContent = dataLang[attr].wind;
+        inputEl.textContent = dataLang[attr].input;
+    });
+    
+});
+
+var dataLang = {
+    "english":
+    {
+        "cityNam": "Enter city name",
+        "error": "Invalid city name, try again",
+        "humidity": "Humidity",
+        "wind": "Wind Speed"
+    },
+    "portuguese":
+    {
+        "cityNam": "Digite o nome da Cidade",
+        "error": "O nome da cidade está inválido, tente novamente",
+        "humidity": "Umidade",
+        "wind": "Velocidade do Vento"
+    }
+}
 
