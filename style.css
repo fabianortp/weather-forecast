@@ -1,27 +1,27 @@
-*{
+* {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     --primary-color: #edf2fc;
     --secondary-color: #212121;
 }
 
-.dark-theme{
+.dark-theme {
     --primary-color: #000106;
     --secondary-color: #fff;
     .invert { filter: invert(100%); };
 }
 
-#icon{
+#icon {
     width: 30px;
     cursor: pointer;
     padding-left: 15px;
 }
 
-.container{
+.container {
     height: 100vh;
     width: 100%;
     background: var(--primary-color);
@@ -29,7 +29,9 @@
     position: relative;
 }
 
-.langWrap{
+/*Div langWrap*/
+
+.langWrap {
     width: 84%;
     margin: auto;
     padding: 20px 0;
@@ -38,12 +40,12 @@
     justify-content: space-between;
 }
 
-.langWrap .items{
+.langWrap .items {
     flex: 1;
     text-align: right;
 }
 
-.langWrap .items a{
+.langWrap .items a {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
@@ -52,42 +54,46 @@
     cursor: pointer;
 }
 
-.langWrap .items a:hover{
+.langWrap .items a:hover {
     color: #ff4321;
 }
 
+/*Div Card*/
 
-.card{
+.card {
     width: 90%;
     max-width: 470px;
     background: var(--secondary-color);
     color: #fff;
-    margin: 100px auto 0;
+    margin: 20px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
     box-sizing: border-box;
 }
 
-.cityNam{
+/*Div City Name*/
+
+.cityNam {
     align-items: end;
     padding-right: 100px;
     padding-bottom: 5px;
-    font-size: 20px;
+    font-size: 1.7rem;
     text-align: justify;
-    font-weight: 200;
-    
+    font-weight: 600;
     color: var(--primary-color);
 }
 
-.search{
+/*Div Search*/
+
+.search {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.search input{
+.search input {
     border: 0;
     outline: 0;
     background: var(--primary-color);
@@ -97,7 +103,7 @@
     border-radius: 30px;
     flex: 1;
     margin-right: 16px;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 .search ::placeholder {
@@ -105,7 +111,7 @@
   }
 
 
-.search button{
+.search button {
     border: 0;
     outline: 0;
     background: var(--primary-color);
@@ -113,33 +119,44 @@
     width: 55px;
     height: 55px;
     cursor: pointer;
-    
 }
 
-.search button img{
+.search button img {
     width: 26px;
-    
 }
 
-.weather-icon{
+/*Div Error*/
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: none;
+    color: var(--primary-color);
+}
+
+/*Div Weather*/
+
+.weather-icon {
     width: 170px;
     margin-top: 30px;
 }
 
-.weather h1{
-    font-size: 80px;
+.weather h1 {
+    font-size: 3.5rem;
     font-weight: 500;
     color: var(--primary-color);
 }
 
-.weather h2{
-    font-size: 45px;
+.weather h2 {
+    font-size: 2.7rem;
     font-weight: 400;
     margin-top: -10px;
     color: var(--primary-color);
 }
 
-.details{
+.details {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -148,33 +165,130 @@
     color: var(--primary-color);
 }
 
-.col{
+.col {
     display: flex;
     align-items: center;
     text-align: left;
 }
 
-.col img{
+.col img {
     width: 40px;
-    margin-right: 10px;
-    
+    margin-right: 10px; 
 }
 
-
-.humidity, .wind{
-    font-size: 28px;
+.humidity, 
+.wind {
+    font-size: 2rem;
     margin-top: -6px;
 }
 
-.weather{
-    display: none;
+@media(max-width: 800px) {
+
+    /*Div Container*/
+
+    .container {
+        height: 110vh;
+    }
+
+    /*Div City Name*/
+
+    .div-citynam {
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .cityNam {
+        font-size: 1.5rem;
+    }
+
+    /*Div Search*/
+
+    .search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .search input {
+        margin-top: 5%;
+        padding: 20px;
+        margin-left: 6%;
+    }
+
+    .search button {
+        margin-top: 15px;
+    }
+
+    /*Div Weather*/
+    
+    .weather-icon {
+        margin-top: 5px;
+    }
+
+    .weather h1 {
+        font-size: 3.5rem;
+    }
+    
+    .weather h2 {
+        font-size: 2.5rem;
+    }
+
+    .details {
+        margin-top: 25px;
+    }
+
+    .humidity, 
+    .wind {
+    font-size: 1.3rem;
+    }
+
 }
 
-.error{
-    text-align: left;
-    margin-left: 10px;
-    font-size: 14px;
-    margin-top: 10px;
-    display: none;
-    color: var(--primary-color);
+@media(max-width: 450px) {
+
+    /*Div Container*/
+    
+    .container {
+        height: 115vh;
+    }
+
+    /*Div Card*/
+
+    .card {
+        margin: 20px auto 70px;
+    }
+    
+    /*Div City Name*/
+
+    .div-citynam {
+        padding-left: 0%;
+    }
+
+    .cityNam {
+        font-size: 1.3rem;
+    }
+
+    /*Div Weather*/
+
+    .weather h1 {
+        font-size: 3rem;
+    }
+    
+    .weather h2 {
+        font-size: 2rem;
+    }
+    
+    .details {
+        display: grid;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .col {
+       padding-top: 15px;
+       font-size: 0.8rem;
+    }
+
 }

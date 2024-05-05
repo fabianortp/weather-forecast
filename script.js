@@ -58,8 +58,10 @@ var icon = document.getElementById("icon");
         }
     }
 
-// Language Change
+//Language Change
 
+const menuPor = document.querySelector('.active');
+const menuEn = document.querySelector('.english');
 const langEl = document.querySelector('.langWrap');
 const link = document.querySelectorAll('a');
 const citynamEl = document.querySelector('.cityNam');
@@ -76,6 +78,8 @@ link.forEach(el => {
 
         const attr = el.getAttribute('language');
 
+        menuEn.textContent = dataLang[attr].english;
+        menuPor.textContent = dataLang[attr].active;
         citynamEl.textContent = dataLang[attr].cityNam;
         errorEl.textContent = dataLang[attr].error;
         humidityEl.textContent = dataLang[attr].humidity;
@@ -88,6 +92,8 @@ link.forEach(el => {
 var dataLang = {
     "english":
     {
+        "active": "Portuguese",
+        "english": "English",
         "cityNam": "Enter city name",
         "error": "Invalid city name, try again",
         "humidity": "Humidity",
@@ -95,7 +101,9 @@ var dataLang = {
     },
     "portuguese":
     {
-        "cityNam": "Digite o nome da Cidade",
+        "active": "Português",
+        "english": "Inglês",
+        "cityNam": "Nome da cidade",
         "error": "O nome da cidade está inválido, tente novamente",
         "humidity": "Umidade",
         "wind": "Velocidade do Vento"
