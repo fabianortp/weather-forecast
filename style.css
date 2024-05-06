@@ -182,6 +182,10 @@
     margin-top: -6px;
 }
 
+.weather{
+    display: none;
+}
+
 @media(max-width: 800px) {
 
     /*Div Container*/
@@ -251,18 +255,19 @@
     /*Div Container*/
     
     .container {
-        height: 115vh;
+        height: 100vh;
     }
 
     /*Div Card*/
 
     .card {
-        margin: 20px auto 70px;
+        margin: -5px auto 70px;
     }
-    
+
     /*Div City Name*/
 
     .div-citynam {
+        margin-top: -15px;
         padding-left: 0%;
     }
 
@@ -270,13 +275,24 @@
         font-size: 1.3rem;
     }
 
+    /*Div Search*/
+
+    .search input {
+        margin-top: 2%;
+    }
+
     /*Div Weather*/
+
+    .weather-icon {
+        margin-top: -15px;
+    }
 
     .weather h1 {
         font-size: 3rem;
     }
     
     .weather h2 {
+        margin-top: 3px;
         font-size: 2rem;
     }
     
@@ -284,6 +300,7 @@
         display: grid;
         margin-left: 20%;
         margin-right: 20%;
+        margin-top: 5px;
     }
 
     .col {
